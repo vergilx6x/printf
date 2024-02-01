@@ -29,3 +29,31 @@ struct format_specifier
  * @format_specifier : The format.
  * @f_s : The function associated.
  */
+typedef struct format_specifier f_s;
+
+int _printf(const char *format, ...);
+
+/******FUNCTIONS******/
+
+/* Funtions to print chars and strings */
+
+int print_char(va_list types, char buffer[]);
+int print_string(va_list types, char buffer[]);
+int print_percent(va_list types, char buffer[]);
+
+/* Functions to print numbers */
+
+int print_int(va_list types, char buffer[]);
+
+
+/*******tools******/
+
+void print_buffer(char buffer[], int *buff_index);
+int int_to_string(int num, char buffer[]);
+int print_int(va_list args, char buffer[]);
+int chose_function(const char *fmt, int *i, va_list list, char buffer[]);
+
+
+
+#endif /* MAIN_H */
+
