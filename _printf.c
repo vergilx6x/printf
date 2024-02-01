@@ -27,3 +27,20 @@ int _printf(const char *format, ...)
 			/* write(1, &format[i], 1);*/
 			printed_chars++;
 		}
+		else
+		{
+			print_buffer(buffer, &buff_index);
+			++i;
+			printed = chose_function(format, &i, list, buffer);
+			if (printed == -1)
+				return (-1);
+			printed_chars += printed;
+		}
+	}
+
+	print_buffer(buffer, &buff_index);
+
+	va_end(list);
+
+	return (printed_chars);
+}

@@ -56,4 +56,3 @@ int chose_function(const char *fmt, int *i, va_list list, char buffer[]);
 
 
 #endif /* MAIN_H */
-
